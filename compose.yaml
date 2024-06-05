@@ -1,0 +1,11 @@
+version: "0.1"
+
+services:
+  app:
+    container_name: birthday-carousel-widget
+    image: carousel-widget
+    build:
+      context: .
+      target: production
+    ports:
+      - 80:80
