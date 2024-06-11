@@ -28,7 +28,7 @@ class App extends React.Component<{}, { emp: []; set: number; url: string }> {
   }
 
   fetchData() {
-    fetch(`${process.env.REACT_APP_API_URL}/employee/birthdate_test`)
+    fetch(`/employee/birthdate`)
       .then((response) => response.json())
       .then((data) => {
         this.setState({ emp: data.result });
