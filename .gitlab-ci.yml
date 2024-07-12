@@ -1,0 +1,37 @@
+image: node:21
+
+stages:
+- build
+- deploy
+
+cache:
+  paths:
+  - node_modules/
+
+before_script:
+- npm install
+
+build:
+  stage: build
+  script:
+  - npm run build
+  artifacts:
+    paths:
+    - build/
+
+deploy:
+  stage: deploy
+  script:
+  - apt-get update -qy
+  - apt-get install -qy git
+  - git config --global user.email "alexander.zykov@lab-sp.com"
+  - git config --global user.name "Alexander Zykov"
+  - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/your-namespace/your-fastapi-repo.git deploy-repo
+  - rm -rf deploy-repo/frontend/*
+  - cp -r build/* deploy-repo/frontend/
+  - cd deploy-repo
+  - git add .
+  - git commit -m "Deploy frontend from React CI"
+  - git push origin main
+  only:
+  - main

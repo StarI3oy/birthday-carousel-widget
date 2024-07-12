@@ -11,7 +11,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+
+    <div className='static'>
+      <App />
+    </div>
   </React.StrictMode>
 );
 

@@ -3,98 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Neue Machina';
-  src: url('../public/font/NeueMachina-Ultralight.eot');
-  src: local('Neue Machina Ultralight'), local('NeueMachina-Ultralight'),
-  url('../public/font/NeueMachina-Ultralight.eot?#iefix') format('embedded-opentype'),
-  url('../public/font/NeueMachina-Ultralight.woff2') format('woff2'),
-  url('../public/font/NeueMachina-Ultralight.woff') format('woff'),
-  url('../public/font/NeueMachina-Ultralight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
+  font-family: "TT Chocolates";
+  src: url("../public/tt-chocolate/tt-chocolates-demibold.otf") format("opentype");
 }
 
-@font-face {
-  font-family: 'Neue Machina';
-  src: url('../public/font/NeueMachina-Light.eot');
-  src: local('Neue Machina Light'), local('NeueMachina-Light'),
-  url('../public/font/NeueMachina-Light.eot?#iefix') format('embedded-opentype'),
-  url('../public/font/NeueMachina-Light.woff2') format('woff2'),
-  url('../public/font/NeueMachina-Light.woff') format('woff'),
-  url('../public/font/NeueMachina-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Neue Machina';
-  src: url('../public/font/NeueMachina-Black.eot');
-  src: local('Neue Machina Black'), local('NeueMachina-Black'),
-  url('../public/font/NeueMachina-Black.eot?#iefix') format('embedded-opentype'),
-  url('../public/font/NeueMachina-Black.woff2') format('woff2'),
-  url('../public/font/NeueMachina-Black.woff') format('woff'),
-  url('../public/font/NeueMachina-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Neue Machina';
-  src: url('../public/font/NeueMachina-Regular.eot');
-  src: local('Neue Machina Regular'), local('NeueMachina-Regular'),
-  url('../public/font/NeueMachina-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../public/font/NeueMachina-Regular.woff2') format('woff2'),
-  url('../public/font/NeueMachina-Regular.woff') format('woff'),
-  url('../public/font/NeueMachina-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Neue Machina';
-  src: url('../public/font/NeueMachina-Bold.eot');
-  src: local('Neue Machina Bold'), local('NeueMachina-Bold'),
-  url('../public/font/NeueMachina-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../public/font/NeueMachina-Bold.woff2') format('woff2'),
-  url('../public/font/NeueMachina-Bold.woff') format('woff'),
-  url('../public/font/NeueMachina-Bold.ttf') format('truetype');
+/* @font-face {
+  font-family: "TT Chocolates";
+  src: url("../public/font/TT-Chocolates-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Neue Machina';
-  src: url('../public/font/NeueMachina-Medium.eot');
-  src: local('Neue Machina Medium'), local('NeueMachina-Medium'),
-  url('../public/font/NeueMachina-Medium.eot?#iefix') format('embedded-opentype'),
-  url('../public/font/NeueMachina-Medium.woff2') format('woff2'),
-  url('../public/font/NeueMachina-Medium.woff') format('woff'),
-  url('../public/font/NeueMachina-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Neue Machina';
-  src: url('../public/font/NeueMachina-Ultrabold.eot');
-  src: local('Neue Machina Ultrabold'), local('NeueMachina-Ultrabold'),
-  url('../public/font/NeueMachina-Ultrabold.eot?#iefix') format('embedded-opentype'),
-  url('../public/font/NeueMachina-Ultrabold.woff2') format('woff2'),
-  url('../public/font/NeueMachina-Ultrabold.woff') format('woff'),
-  url('../public/font/NeueMachina-Ultrabold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-}
-
+} */
 
 body {
   margin: 0;
-  font-family: 'Neue Machina';
+  font-family: "TT Chocolates";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
-}
