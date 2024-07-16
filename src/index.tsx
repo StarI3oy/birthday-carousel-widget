@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ConfigProvider } from 'antd';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,7 +14,31 @@ root.render(
   <React.StrictMode>
 
     <div className='static'>
-      <App />
+      <ConfigProvider
+        theme={{
+          token: {
+            borderRadius: 0,
+            fontFamily: "TT Chocolates",
+            colorBorder: "#d9b15a",
+            lineWidth: 0,
+          },
+          components: {
+            Button: {
+              colorText: "#d9b15a",
+            },
+            Carousel: {
+              colorBgContainer: "#d9b15a",
+            },
+            Spin: {
+              colorPrimary: "#d9b15a",
+            },
+            Grid: {},
+            Card: {},
+          },
+        }}
+      >
+        <App />
+      </ConfigProvider >
     </div>
   </React.StrictMode>
 );
