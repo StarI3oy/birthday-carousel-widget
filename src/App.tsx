@@ -8,7 +8,7 @@ import {
 import Carousel, { CarouselRef } from "antd/es/carousel";
 
 function monthNumberToWord(monthNumber: number): string {
-  console.log(monthNumber)
+
   const months = [
     "Января",
     "Февраля",
@@ -59,7 +59,7 @@ class App extends React.Component<
         this.setState({ emp: data.result });
         this.setState({ url: data.url });
         this.increment();
-        console.log(data.result)
+
       })
       .catch((err) => console.log(err));
   }
@@ -73,7 +73,7 @@ class App extends React.Component<
     if (set === 0) {
       return (
         <Card
-          className="h-screen w-screen items-center rounded-xl"
+          className="h-screen w-screen items-center"
           style={{ borderColor: "#0193B7" }}
         >
           <Spin
@@ -86,7 +86,7 @@ class App extends React.Component<
       if (emp.length === 0) {
         return (
 
-          <Card className="h-screen border-4 border-[#d9b15a] rounded-2xl">
+          <Card className="h-screen ">
             <Row className="relative  mx-auto w-[300px]" justify="space-around">
               <Col className="top-6" >
 
@@ -128,7 +128,7 @@ class App extends React.Component<
                 {emp.map((el: any, index: number) => (
                   <Card
                     key={index}
-                    className="h-screen overflow-visible  rounded-2xl"
+                    className="h-screen "
                   >
                     <Row className="" justify={"center"}>
                       <b className="text-2xl text-center  sm:text-3xl mt-[-13px]">С Днём Рождения!</b>
@@ -153,28 +153,28 @@ class App extends React.Component<
                         {el.avatar ? (
                           <img
                             alt=""
-                            className=" aspect-square object-cover h-[168px] w-[168px]"
+                            className=" mt-3 ml-1 aspect-square object-cover h-[160px] w-[160px]"
                             src={url + el.avatar}
                           />
 
                         ) : (
                           <img
                             alt=""
-                            className=" aspect-square object-cover h-[168px] w-[168px] "
+                            className="mt-3 ml-1  aspect-square object-cover h-[168px] w-[168px] "
                             src={"День рождения3-02.png"}
                           />
                         )}
                       </Col>
                       <img
                         alt=""
-                        className=" absolute top-[-60px] pr-2 self-center h-96 w-64 aspect-square object-cover"
+                        className=" absolute top-[-60px] pt-4 self-center h-96 w-64 aspect-square object-cover"
                         src={"День рождения2-02.png"}
                       />
                     </Row>
 
-                    <Row className="max-h-[100px] mt-[25px]" justify="space-around">
+                    <Row className="max-h-[100px] mt-[45px]" justify="space-around">
                       <Col xs={24} sm={15} className="">
-                        <div className=" text-xl text-center ">
+                        <div className=" text-2xl text-center ">
                           <b className=" text-center ">
                             {el.full_name.last_name}{" "}
                           </b>
@@ -191,10 +191,10 @@ class App extends React.Component<
 
                     </Row>
                     <Row className="h-[100px] mt-[20px]" justify="space-around" >
-                      <a target="_blank" rel="noopener noreferrer" href={url + "/user/" + el.id}>
-                        <Button className="outline outline-1 text-xl  rounded-lg text-center py-0 ">Поздравить!</Button>
+                      <a target="_parent" rel="noopener noreferrer" href={url + "/user/" + el.id}>
+                        <Button className="outline outline-1 text-2xl py-[1px] px-[24px] rounded-lg text-center align-center">Поздравить!</Button>
                       </a>
-                    </Row>
+                    </Row> 
                   </Card>
                 ))}
               </Carousel>
